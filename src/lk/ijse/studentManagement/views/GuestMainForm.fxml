@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.GuestMainFormController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #343a40;">
+         <children>
+            <TableView fx:id="tblGuestMainForm" layoutX="14.0" layoutY="163.0" prefHeight="380.0" prefWidth="274.0">
+              <columns>
+                <TableColumn fx:id="colRegId" prefWidth="68.0" text="Reg ID" />
+                <TableColumn fx:id="colStudentName" prefWidth="205.0" text="Student Name" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="cmbCourse" layoutX="51.0" layoutY="29.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Course" style="-fx-background-color: white;" />
+            <ComboBox fx:id="cmbBatch" disable="true" layoutX="51.0" layoutY="81.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Batch" style="-fx-background-color: white;" />
+            <OctIconView fx:id="iconExit" fill="#dddddd" glyphName="SIGN_OUT" layoutX="14.0" layoutY="580.0" onMouseClicked="#iconExitOnMouseClicked" size="25" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblPendingExam" layoutX="309.0" layoutY="57.0" prefHeight="186.0" prefWidth="674.0">
+         <columns>
+            <TableColumn fx:id="colSubject" prefWidth="197.0" text="Subject" />
+            <TableColumn fx:id="colExam" prefWidth="208.0" text="Exam Name" />
+            <TableColumn fx:id="colDate" prefWidth="114.0" text="Date" />
+            <TableColumn fx:id="colStart" prefWidth="81.0" text="Start(Time)" />
+            <TableColumn fx:id="colEnd" prefWidth="73.0" text="End(Time)" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblExamDetail" layoutX="309.0" layoutY="297.0" prefHeight="241.0" prefWidth="674.0">
+         <columns>
+            <TableColumn fx:id="colSubjectName" prefWidth="203.0" text="Subject" />
+            <TableColumn fx:id="colExamName" prefWidth="226.0" text="Exam Name" />
+            <TableColumn fx:id="colExamDate" prefWidth="105.0" text="Exam Date" />
+            <TableColumn fx:id="colMarks" prefWidth="58.0" text="Marks" />
+            <TableColumn fx:id="colExamState" minWidth="0.0" text="Exam State" />
+         </columns>
+      </TableView>
+      <Label layoutX="570.0" layoutY="562.0" text="Search :" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="631.0" layoutY="558.0" onKeyReleased="#txtSearchEventOnKeyReleased" prefHeight="28.0" prefWidth="182.0" />
+      <JFXComboBox fx:id="cmbSelectField" focusColor="#17a2b8" layoutX="824.0" layoutY="558.0" prefHeight="28.0" prefWidth="162.0" promptText="Select Field" unFocusColor="#343a40" />
+      <Label layoutX="310.0" layoutY="31.0" text="Pending/Upcoming Exams" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="271.0" text="Exam Marks" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

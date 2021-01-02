@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="527.0" prefWidth="810.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.LandingScreenController">
+   <children>
+      <AnchorPane prefHeight="71.0" prefWidth="810.0" style="-fx-background-color: #343a40;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="40.0" prefWidth="264.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="291.0" layoutY="104.0" prefHeight="145.0" prefWidth="276.0" />
+      <JFXButton fx:id="btnAdmin" buttonType="RAISED" layoutX="245.0" layoutY="302.0" onAction="#btnAdminOnAction" prefHeight="54.0" prefWidth="92.0" style="-fx-background-color: #dc3545;" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnGuest" buttonType="RAISED" layoutX="446.0" layoutY="302.0" onAction="#btnGuestOnAction" prefHeight="54.0" prefWidth="92.0" style="-fx-background-color: #28a745;" text="Guest" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#686868" glyphName="USER" layoutX="451.0" layoutY="251.0" size="100" wrappingWidth="81.00000189244747" />
+      <FontAwesomeIconView fill="#686868" glyphName="ADN" layoutX="250.0" layoutY="252.0" size="100" wrappingWidth="81.00000189244747" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.MarkResultController">
+   <children>
+      <JFXComboBox fx:id="cmbCourse" focusColor="#17a2b8" labelFloat="true" layoutX="123.0" layoutY="52.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Course" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbBatch" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="123.0" layoutY="237.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Batch" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbSubject" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="123.0" layoutY="145.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Subject" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbExam" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="123.0" layoutY="330.0" onAction="#cmbExamOnAction" prefHeight="28.0" prefWidth="200.0" promptText="Select Exam" unFocusColor="#343a40" />
+      <TableView fx:id="tblMarkResult" editable="true" layoutX="515.0" layoutY="14.0" prefHeight="462.0" prefWidth="645.0">
+        <columns>
+          <TableColumn fx:id="colId" minWidth="0.0" prefWidth="0.0" resizable="false" text="ID" />
+          <TableColumn fx:id="colRegId" prefWidth="136.0" text="Reg ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="416.0" text="Student Name" />
+            <TableColumn fx:id="colMarks" prefWidth="102.0" text="Marks" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSetOrUpdate" layoutX="249.0" layoutY="412.0" onAction="#btnSetOrUpdateOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #17a2b8;" text="Set" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

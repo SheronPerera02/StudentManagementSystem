@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.ViewAllRegistrationController">
+   <children>
+      <TableView fx:id="tblViewAllRegistration" layoutX="10.0" layoutY="14.0" prefHeight="339.0" prefWidth="1148.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="86.0" text="ID" />
+          <TableColumn fx:id="colStudentId" prefWidth="97.0" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="307.0" text="Student Name" />
+            <TableColumn fx:id="colCourse" prefWidth="233.0" text="Course" />
+            <TableColumn fx:id="colBatch" prefWidth="76.0" text="Batch No" />
+            <TableColumn fx:id="colRegDate" prefWidth="162.0" text="Reg Date" />
+            <TableColumn fx:id="colFee" minWidth="0.0" prefWidth="90.0" text="Fee" />
+            <TableColumn fx:id="colDueFee" prefWidth="96.0" text="Due Fee" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnPayment" layoutX="12.0" layoutY="447.0" onAction="#btnPaymentOnAction" prefHeight="28.0" prefWidth="85.0" style="-fx-background-color: #ffc107;" text="Payment" textFill="#343a40">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtRegistrationId" disable="true" layoutX="14.0" layoutY="400.0" visible="false" />
+      <Label fx:id="lblRegId" layoutX="14.0" layoutY="378.0" text="Registration ID" textFill="#343a40" visible="false">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPaymentDate" disable="true" layoutX="200.0" layoutY="400.0" visible="false" />
+      <Label fx:id="lblDate" layoutX="200.0" layoutY="379.0" text="Date" textFill="#343a40" visible="false">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="387.0" layoutY="400.0" visible="false" />
+      <Label fx:id="lblAmount" layoutX="387.0" layoutY="379.0" text="Amount" textFill="#343a40" visible="false">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPay" layoutX="475.0" layoutY="447.0" onAction="#btnPayOnAction" prefHeight="28.0" prefWidth="74.0" style="-fx-background-color: #17a2b8;" text="Pay" textFill="WHITE" visible="false">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" layoutX="387.0" layoutY="447.0" onAction="#btnCancelOnAction" prefHeight="28.0" prefWidth="74.0" style="-fx-background-color: #dc3545;" text="Cancel" textFill="WHITE" visible="false">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtSearch" layoutX="739.0" layoutY="447.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="28.0" prefWidth="200.0" />
+      <Label layoutX="676.0" layoutY="451.0" text=" Search :">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectField" focusColor="#17a2b8" labelFloat="true" layoutX="956.0" layoutY="447.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Field" unFocusColor="#343a40" />
+   </children>
+</AnchorPane>

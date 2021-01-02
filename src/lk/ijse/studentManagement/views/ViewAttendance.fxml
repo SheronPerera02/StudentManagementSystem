@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.ViewAttendanceController">
+   <children>
+      <TableView fx:id="tblViewAttendance" editable="true" layoutX="514.0" layoutY="14.0" prefHeight="442.0" prefWidth="642.0">
+         <columns>
+            <TableColumn fx:id="colRegId" prefWidth="99.0" text="Reg ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="302.0" text="Student Name" />
+            <TableColumn fx:id="colAttendance" prefWidth="98.0" text="Attendance" />
+            <TableColumn fx:id="colArrival" prefWidth="65.0" text="Arrival" />
+            <TableColumn fx:id="colDeparture" prefWidth="76.0" text="Departure" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblEvent" layoutX="14.0" layoutY="150.0" prefHeight="306.0" prefWidth="466.0">
+        <columns>
+          <TableColumn fx:id="colEventName" prefWidth="342.0" text="Event Name" />
+          <TableColumn fx:id="colDate" prefWidth="123.0" text="Date" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbCourse" focusColor="#17a2b8" layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="240.0" promptText="Select Course" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbSubject" disable="true" focusColor="#17a2b8" layoutX="14.0" layoutY="63.0" prefHeight="28.0" prefWidth="240.0" promptText="Select Subject" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbBatch" disable="true" focusColor="#17a2b8" layoutX="14.0" layoutY="108.0" prefHeight="28.0" prefWidth="240.0" promptText="Select Batch" unFocusColor="#343a40" />
+      <Label layoutX="64.0" layoutY="484.0" text="Search :" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchTableEvent" layoutX="125.0" layoutY="480.0" onKeyReleased="#txtSearchEventOnKeyReleased" prefHeight="28.0" prefWidth="182.0" />
+      <JFXComboBox fx:id="cmbSelectFieldEvent" focusColor="#17a2b8" labelFloat="true" layoutX="318.0" layoutY="480.0" prefHeight="28.0" prefWidth="162.0" promptText="Select Field" unFocusColor="#343a40" />
+      <Label layoutX="740.0" layoutY="484.0" text="Search :" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchTableAttendance" layoutX="801.0" layoutY="480.0" onKeyReleased="#txtSearchAttendanceOnKeyReleased" prefHeight="28.0" prefWidth="182.0" />
+      <JFXComboBox fx:id="cmbSelectFieldAttendance" focusColor="#17a2b8" labelFloat="true" layoutX="994.0" layoutY="480.0" prefHeight="28.0" prefWidth="162.0" promptText="Select Field" unFocusColor="#343a40" />
+   </children>
+</AnchorPane>

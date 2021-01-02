@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.AddSubjectController">
+   <children>
+      <JFXComboBox fx:id="cmbCourse" focusColor="#17a2b8" labelFloat="true" layoutX="66.0" layoutY="94.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Course" unFocusColor="#343a40" />
+      <JFXTextField fx:id="txtSubject" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="66.0" layoutY="163.0" onAction="#txtSubjectOnAction" prefHeight="28.0" prefWidth="300.0" promptText="Subject" unFocusColor="#343a40" visible="false">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </JFXTextField>
+      <TextField fx:id="txtSemester" layoutX="66.0" layoutY="258.0" prefHeight="28.0" prefWidth="100.0" />
+      <Label layoutX="66.0" layoutY="237.0" text="Semester" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCancel" layoutX="66.0" layoutY="334.0" onAction="#btnCancelOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #dc3545;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddOrUpdate" layoutX="293.0" layoutY="334.0" onAction="#btnAddOrUpdateOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #17a2b8;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCourseSubject" layoutX="519.0" layoutY="14.0" prefHeight="392.0" prefWidth="637.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="88.0" text="ID" />
+          <TableColumn fx:id="colCourse" prefWidth="217.0" text="Course" />
+            <TableColumn fx:id="colSubject" prefWidth="242.0" text="Subject" />
+            <TableColumn fx:id="colSemester" prefWidth="89.0" text="Semester" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblOptionality" layoutX="176.0" layoutY="262.0" text="(Optional)" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSubject" focusColor="#17a2b8" labelFloat="true" layoutX="66.0" layoutY="166.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Subject" unFocusColor="#343a40" />
+      <JFXButton fx:id="btnNewOrSelect" layoutX="378.0" layoutY="167.0" onAction="#btnNewOrSelectOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #343a40;" text="New" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

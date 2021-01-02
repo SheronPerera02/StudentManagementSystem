@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.ViewResultController">
+   <children>
+      <TableView fx:id="tblViewResult" editable="true" layoutX="395.0" layoutY="14.0" prefHeight="400.0" prefWidth="761.0">
+         <columns>
+            <TableColumn fx:id="colRegId" prefWidth="136.0" text="Reg ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="416.0" text="Student Name" />
+            <TableColumn fx:id="colMarks" prefWidth="100.0" text="Marks" />
+            <TableColumn fx:id="colExamState" prefWidth="108.0" text="Exam State" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbCourse" focusColor="#17a2b8" labelFloat="true" layoutX="91.0" layoutY="61.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Course" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbBatch" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="91.0" layoutY="247.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Batch" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbSubject" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="91.0" layoutY="154.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Subject" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbExam" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="91.0" layoutY="340.0" onAction="#cmbExamOnAction" prefHeight="28.0" prefWidth="200.0" promptText="Select Exam" unFocusColor="#343a40" />
+      <Label layoutX="730.0" layoutY="451.0" text="Search :" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="791.0" layoutY="447.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="28.0" prefWidth="182.0" />
+      <JFXComboBox fx:id="cmbSelectField" focusColor="#17a2b8" labelFloat="true" layoutX="994.0" layoutY="447.0" prefHeight="28.0" prefWidth="162.0" promptText="Select Field" unFocusColor="#343a40" />
+   </children>
+</AnchorPane>

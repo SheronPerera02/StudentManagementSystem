@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.ViewAllStudentController">
+   <children>
+      <TableView fx:id="tblViewAllStudent" layoutX="16.0" layoutY="14.0" onMouseClicked="#tblViewAllStudentOnMouseClicked" prefHeight="412.0" prefWidth="1140.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="144.0" text="Name" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="146.0" text="E-mail" />
+            <TableColumn fx:id="colAddress" prefWidth="218.0" text="Address" />
+            <TableColumn fx:id="colContact" minWidth="0.0" prefWidth="125.0" text="Contact" />
+            <TableColumn fx:id="colDateOfBirth" prefWidth="130.0" text="Date Of Birth" />
+            <TableColumn fx:id="colParentName" prefWidth="146.0" text="Name(Parent/Other)" />
+            <TableColumn fx:id="colParentContact" prefWidth="155.0" text="Contact(Parent/Other)" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="739.0" layoutY="447.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="28.0" prefWidth="200.0" />
+      <Label layoutX="676.0" layoutY="451.0" text=" Search :">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectField" focusColor="#17a2b8" labelFloat="true" layoutX="956.0" layoutY="447.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Field" unFocusColor="#343a40" />
+   </children>
+</AnchorPane>

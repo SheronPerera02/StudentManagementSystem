@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="1170.0" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.StudentController">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="75.0" prefHeight="555.0" prefWidth="1170.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="studentViewAllTab" closable="false" onSelectionChanged="#studentViewAllTabOnSelectionChanged" text="View All">
+            <content>
+              <AnchorPane fx:id="studentViewAllPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab fx:id="studentRegisterTab" closable="false" onSelectionChanged="#studentRegisterTabOnSelectionChanged" text="Register">
+            <content>
+              <AnchorPane fx:id="studentRegisterPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="studentUpdateTab" onSelectionChanged="#studentUpdateTabOnSelectionChanged" text="Update">
+              <content>
+                <AnchorPane fx:id="studentUpdatePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane prefHeight="75.0" prefWidth="1170.0" style="-fx-background-color: #343a40;">
+         <children>
+            <Label layoutX="1055.0" layoutY="18.0" prefHeight="40.0" prefWidth="101.0" text="Student" textFill="#dddddd">
+               <font>
+                  <Font name="Source Sans Pro Light" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

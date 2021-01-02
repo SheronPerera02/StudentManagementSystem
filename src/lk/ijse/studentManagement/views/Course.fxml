@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.CourseController">
+   <children>
+      <JFXTextField fx:id="txtCourseName" focusColor="#17a2b8" labelFloat="true" layoutX="42.0" layoutY="93.0" onAction="#txtCourseNameOnAction" prefHeight="28.0" prefWidth="306.0" promptText="Course Name" unFocusColor="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </JFXTextField>
+      <TextField fx:id="txtYears" layoutX="103.0" layoutY="181.0" onAction="#txtYearsOnAction" prefHeight="28.0" prefWidth="90.0" />
+      <TextField fx:id="txtMonths" layoutX="103.0" layoutY="234.0" onAction="#txtMonthsOnAction" prefHeight="28.0" prefWidth="90.0" />
+      <Label layoutX="42.0" layoutY="237.0" text="Months :" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="144.0" prefHeight="18.0" prefWidth="107.0" text="Duration" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddOrUpdate" layoutX="275.0" layoutY="391.0" onAction="#btnAddOrUpdateOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #17a2b8;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" layoutX="41.0" layoutY="391.0" onAction="#btnCancelOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #dc3545;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblAddCourse" layoutX="519.0" layoutY="14.0" prefHeight="425.0" prefWidth="637.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colCourseName" prefWidth="269.0" text="Course Name" />
+            <TableColumn fx:id="colDuration" prefWidth="130.0" text="Duration(Months)" />
+            <TableColumn fx:id="colCourseFee" prefWidth="162.0" text="Course Fee" />
+        </columns>
+      </TableView>
+      <Label layoutX="45.0" layoutY="185.0" prefHeight="21.0" prefWidth="48.0" text="Years :" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseFee" layoutX="40.0" layoutY="307.0" prefHeight="28.0" prefWidth="150.0" />
+      <Label layoutX="44.0" layoutY="286.0" text="Course Fee" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

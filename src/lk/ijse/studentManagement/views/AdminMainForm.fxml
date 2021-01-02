@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.AdminMainFormController">
+   <children>
+      <AnchorPane prefHeight="630.0" prefWidth="200.0" style="-fx-background-color: #343a40;">
+         <children>
+            <JFXButton fx:id="btnDashboard" layoutX="1.0" layoutY="150.0" onAction="#btnDashboardOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Dashboard" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLectureSchedule" layoutX="-1.0" layoutY="400.0" onAction="#btnLectureScheduleOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Lecture Schedule" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAcademic" layoutY="200.0" onAction="#btnAcademicOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Academic" textFill="#dddddd" wrapText="true">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExam" layoutX="-1.0" layoutY="350.0" onAction="#btnExamOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Exam" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAttendance" layoutX="1.0" layoutY="448.0" onAction="#btnAttendanceOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Attendance" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <Label layoutX="80.0" layoutY="19.0" prefHeight="47.0" prefWidth="58.0" text="SM" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="31.0" />
+               </font>
+            </Label>
+            <OctIconView fill="#6610f2" glyphName="SQUIRREL" layoutX="35.0" layoutY="55.0" size="50" wrappingWidth="52.0" />
+            <Separator layoutY="75.0" prefWidth="200.0" styleClass="jfx-color" stylesheets="@Separator.css" />
+            <Separator layoutY="149.0" prefWidth="200.0" stylesheets="@Separator.css" />
+            <Label fx:id="lblUsername" ellipsisString="" layoutX="41.0" layoutY="100.0" prefHeight="25.0" prefWidth="149.0" text="Username" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="10.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="199.0" prefWidth="200.0" stylesheets="@Separator.css" />
+            <FontAwesomeIconView fx:id="settingsIcon" fill="#dddddd" glyphName="SLIDERS" layoutX="10.0" layoutY="610.0" onMouseClicked="#settingsIconOnMouseClicked" size="25" text="" />
+            <JFXButton fx:id="btnLecturer" layoutY="250.0" onAction="#btnLecturerOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Lecturer" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <MaterialDesignIconView fill="#dddddd" glyphName="ACCOUNT_OUTLINE" layoutX="8.0" layoutY="121.0" size="25" />
+            <FontAwesomeIconView fill="#dddddd" glyphName="GRADUATION_CAP" layoutX="46.0" layoutY="280.0" size="16" />
+            <FontAwesomeIconView fill="#dddddd" glyphName="HOURGLASS_HALF" layoutX="62.0" layoutY="380.0" size="16" />
+            <FontAwesomeIconView fill="#dddddd" glyphName="BAR_CHART" layoutX="39.0" layoutY="478.0" size="16" />
+            <FontAwesomeIconView fill="#dddddd" glyphName="TH_LIST" layoutX="19.0" layoutY="430.0" size="16" />
+            <FontAwesomeIconView fill="#dddddd" glyphName="DASHBOARD" layoutX="43.0" layoutY="180.0" size="16" />
+            <FontAwesomeIconView fill="#dddddd" glyphName="SITEMAP" layoutX="47.0" layoutY="230.0" size="16" />
+            <AnchorPane fx:id="settingsPane" layoutX="31.0" layoutY="512.0" prefHeight="77.0" prefWidth="133.0" style="-fx-background-color: #dddddd;" visible="false">
+               <children>
+                  <JFXButton fx:id="btnAdminAccount" disable="true" layoutY="8.0" onAction="#btnAdminAccountOnAction" prefHeight="30.0" prefWidth="133.0" style="-fx-background-color: #dddddd;" text="Admin Accounts" textAlignment="CENTER" textFill="#343a40">
+                     <font>
+                        <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnLogOut" layoutY="39.0" onAction="#btnLogOutOnAction" prefHeight="30.0" prefWidth="133.0" style="-fx-background-color: #dddddd;" text="Log Out" textAlignment="CENTER" textFill="#343a40">
+                     <font>
+                        <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="btnStudent" layoutY="300.0" onAction="#btnStudentOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #343a40;" text="Student" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#dddddd" glyphName="USER_PLUS" layoutX="51.0" layoutY="330.0" size="16" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rootAnchorPane" layoutX="200.0" prefHeight="630.0" prefWidth="1170.0" styleClass="jfx-color" stylesheets="@Separator.css" />
+   </children>
+</AnchorPane>

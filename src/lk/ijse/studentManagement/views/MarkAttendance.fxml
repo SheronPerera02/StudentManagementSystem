@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.MarkAttendanceController">
+   <children>
+      <TableView fx:id="tblMarkAttendance" editable="true" layoutX="378.0" layoutY="14.0" prefHeight="494.0" prefWidth="778.0">
+         <columns>
+            <TableColumn fx:id="colId" minWidth="0.0" prefWidth="0.0" resizable="false" text="ID" />
+            <TableColumn fx:id="colRegId" prefWidth="112.0" text="Reg ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="302.0" text="Student Name" />
+            <TableColumn prefWidth="129.0" text="Attendance">
+               <columns>
+                  <TableColumn fx:id="colPresent" prefWidth="59.0" text="Present" />
+                  <TableColumn fx:id="colAbsent" prefWidth="54.0" text="Absent" />
+               </columns></TableColumn>
+            <TableColumn fx:id="colArrival" prefWidth="129.0" text="Arrival" />
+            <TableColumn fx:id="colDeparture" prefWidth="120.0" text="Departure" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbCourse" focusColor="#17a2b8" labelFloat="true" layoutX="36.0" layoutY="68.0" prefHeight="28.0" prefWidth="240.0" promptText="Select Course" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbBatch" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="36.0" layoutY="253.0" prefHeight="28.0" prefWidth="240.0" promptText="Select Batch" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbSubject" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="36.0" layoutY="161.0" prefHeight="28.0" prefWidth="240.0" promptText="Select Subject" unFocusColor="#343a40" />
+      <JFXButton fx:id="btnSetOrUpdate" layoutX="202.0" layoutY="428.0" onAction="#btnSetOrUpdateOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #17a2b8;" text="Set" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtEventName" disable="true" layoutX="36.0" layoutY="348.0" prefHeight="28.0" prefWidth="240.0" />
+      <Label fx:id="lblEventName" layoutX="36.0" layoutY="327.0" text="Event Name(Lesson/Exam/Other)" textFill="#343a40">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnNewOrSelect" disable="true" layoutX="287.0" layoutY="348.0" onAction="#btnNewOrSelectOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #343a40;" text="Select" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbEvent" disable="true" focusColor="#17a2b8" labelFloat="true" layoutX="36.0" layoutY="347.0" onAction="#cmbEventOnAction" prefHeight="28.0" prefWidth="240.0" promptText="Select Event" unFocusColor="#343a40" visible="false" />
+   </children>
+</AnchorPane>

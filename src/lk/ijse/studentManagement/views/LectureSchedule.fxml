@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="630.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.LectureScheduleController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="1170.0" style="-fx-background-color: #343a40;">
+         <children>
+            <Label layoutX="943.0" layoutY="18.0" prefHeight="40.0" prefWidth="213.0" text="Lecture Schedule" textFill="#dddddd">
+               <font>
+                  <Font name="Source Sans Pro Light" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblLectureSchedule" layoutX="14.0" layoutY="82.0" prefHeight="300.0" prefWidth="1148.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="62.0" text="ID" />
+          <TableColumn fx:id="colDayName" prefWidth="95.0" text="Day Name" />
+            <TableColumn fx:id="colLecturer" prefWidth="180.0" text="Lecturer" />
+            <TableColumn fx:id="colCourse" prefWidth="202.0" text="Course" />
+            <TableColumn fx:id="colBatch" prefWidth="64.0" text="Batch" />
+            <TableColumn fx:id="colSubject" prefWidth="174.0" text="Subject" />
+            <TableColumn fx:id="colDescription" prefWidth="203.0" text="Description" />
+            <TableColumn fx:id="colStartTime" prefWidth="86.0" text="Start Time" />
+            <TableColumn fx:id="colEndTime" prefWidth="81.0" text="End Time" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbDay" focusColor="#17a2b8" labelFloat="true" layoutX="80.0" layoutY="434.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Day" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbLecturer" focusColor="#17a2b8" labelFloat="true" layoutX="80.0" layoutY="484.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Lecturer" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbCourse" focusColor="#17a2b8" labelFloat="true" layoutX="415.0" layoutY="433.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Course" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbBatch" focusColor="#17a2b8" labelFloat="true" layoutX="415.0" layoutY="483.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Batch" unFocusColor="#343a40" />
+      <JFXComboBox fx:id="cmbSubject" focusColor="#17a2b8" labelFloat="true" layoutX="415.0" layoutY="535.0" prefHeight="28.0" prefWidth="300.0" promptText="Select Subject" unFocusColor="#343a40" />
+      <JFXTextArea fx:id="txtDescription" focusColor="#17a2b8" labelFloat="true" layoutX="741.0" layoutY="447.0" prefHeight="63.0" prefWidth="350.0" promptText="Description" unFocusColor="#343a40" />
+      <JFXTimePicker fx:id="txtStartTime" defaultColor="#007bff" layoutX="740.0" layoutY="535.0" prefHeight="28.0" prefWidth="163.0" promptText="Start Time" />
+      <JFXTimePicker fx:id="txtEndTime" defaultColor="#007bff" layoutX="928.0" layoutY="535.0" prefHeight="28.0" prefWidth="163.0" promptText="End Time(Estimated)" />
+      <JFXButton fx:id="btnAddOrUpdate" layoutX="1017.0" layoutY="590.0" onAction="#btnAddOrUpdateOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #17a2b8;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" layoutX="741.0" layoutY="590.0" onAction="#btnCancelOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #dc3545;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" disable="true" layoutX="1082.0" layoutY="391.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #ffc107;" text="Delete" textFill="#343a40" visible="false">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

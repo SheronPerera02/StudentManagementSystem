@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="1170.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.ViewAllPaymentController">
+   <children>
+      <TableView fx:id="tblViewAllPayment" layoutX="16.0" layoutY="14.0" prefHeight="412.0" prefWidth="1140.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="142.0" text="Invoice No" />
+          <TableColumn fx:id="colRegistrationId" prefWidth="199.0" text="RegID" />
+            <TableColumn fx:id="colStudentName" minWidth="0.0" prefWidth="364.0" text="Student Name" />
+            <TableColumn fx:id="colDate" prefWidth="226.0" text="Date" />
+            <TableColumn fx:id="colAmount" prefWidth="208.0" text="Amount" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="739.0" layoutY="447.0" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="28.0" prefWidth="200.0" />
+      <Label layoutX="676.0" layoutY="451.0" text=" Search :">
+         <font>
+            <Font name="Noto Sans Canadian Aboriginal" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectField" focusColor="#17a2b8" labelFloat="true" layoutX="956.0" layoutY="447.0" prefHeight="28.0" prefWidth="200.0" promptText="Select Field" unFocusColor="#343a40" />
+   </children>
+</AnchorPane>

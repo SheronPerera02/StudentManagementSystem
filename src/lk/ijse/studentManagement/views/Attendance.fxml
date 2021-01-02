@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="630.0" prefWidth="1170.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studentManagement.controller.AttendanceController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="1170.0" style="-fx-background-color: #343a40;">
+         <children>
+            <Label layoutX="1014.0" layoutY="18.0" prefHeight="40.0" prefWidth="142.0" text="Attendance" textFill="#dddddd">
+               <font>
+                  <Font name="Source Sans Pro Light" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutY="75.0" prefHeight="555.0" prefWidth="1170.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="viewAttendanceTab" onSelectionChanged="#viewAttendanceTabOnSelection" text="View Attendance">
+            <content>
+              <AnchorPane fx:id="viewAttendancePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab fx:id="markAttendanceTab" onSelectionChanged="#markAttendanceTabOnSelection" text="Mark Attendance">
+            <content>
+              <AnchorPane fx:id="markAttendancePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
