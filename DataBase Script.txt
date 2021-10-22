@@ -1,0 +1,195 @@
+DROP DATABASE StudentManagement;
+CREATE DATABASE StudentManagement;
+USE StudentManagement;
+
+
+CREATE TABLE Student(
+    SID varchar(10),
+    Name varchar(100) NOT NULL,
+    Email varchar(100) NOT NULL,
+    Address varchar(200) NOT NULL,
+    Contact varchar(10) NOT NULL,
+    DateOfBirth date NOT NULL,
+    ParentName varchar(100),
+    ParentContact varchar(10),
+    CONSTRAINT UNIQUE(Contact),
+    CONSTRAINT PRIMARY KEY(SID)
+)ENGINE=INNODB;
+
+CREATE TABLE Course(
+    CID varchar(10),
+    CourseName varchar(100) NOT NULL,
+    Duration varchar(50) NOT NULL,
+    CourseFee double NOT NULL,
+    CONSTRAINT PRIMARY KEY(CID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Batch(
+    BID varchar(10),
+    BatchID int NOT NULL,
+    CID varchar(10) NOT NULL,
+    StartDate date NOT NULL,
+    EndDate date NOT NULL,
+    RegFee double NOT NULL,
+    CourseFee double NOT NULL,
+    CONSTRAINT FOREIGN KEY(CID) REFERENCES Course(CID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(BID)
+)ENGINE=INNODB;
+
+    
+CREATE TABLE Registration(
+    RID varchar(10),
+    SID varchar(10) NOT NULL,
+    BID varchar(10) NOT NULL,
+    RegDate date NOT NULL,
+    Fee double NOT NULL,
+    CONSTRAINT FOREIGN KEY(SID) REFERENCES Student(SID)
+    ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY(BID) REFERENCES Batch(BID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(RID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Payment(
+    PID varchar(100),
+    RID varchar(10) NOT NULL,
+    Date date NOT NULL,
+    Amount double NOT NULL,
+    CONSTRAINT FOREIGN KEY(RID) REFERENCES Registration(RID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(PID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Subject(
+    SubID varchar(10),
+    SubName varchar(100) NOT NULL,
+    CONSTRAINT PRIMARY KEY(SubID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Course_Subject(
+    CSID varchar(10),
+    CID varchar(10) NOT NULL,
+    SubID varchar(10) NOT NULL,
+    Semester varchar(50) NOT NULL,
+    CONSTRAINT FOREIGN KEY(CID) REFERENCES Course(CID)
+    ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY(SubID) REFERENCES Subject(SubID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(CSID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Lecturer(
+    LecID varchar(10),
+    Name varchar(100) NOT NULL,
+    Email varchar(100) NOT NULL,
+    Address varchar(200) NOT NULL,
+    DateOfBirth date NOT NULL,
+    Contact varchar(10) NOT NULL,
+    CONSTRAINT UNIQUE(Contact),
+    CONSTRAINT PRIMARY KEY(LecID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Lecture_Schedule(
+    LID varchar(10),
+    Day_Name varchar(20) NOT NULL,
+    LecID varchar(10) NOT NULL,
+    CSID varchar(10) NOT NULL,
+    Batch int NOT NULL,
+    Description varchar(100) NOT NULL,
+    Start time NOT NULL,
+    End time NOT NULL,
+    CONSTRAINT FOREIGN KEY(LecID) REFERENCES Lecturer(LecID)
+    ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY(CSID) REFERENCES Course_Subject(CSID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(LID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Exam(
+    ExID varchar(10),
+    Exam_Date date NOT NULL,
+    CSID varchar(10) NOT NULL,
+    Start time NOT NULL,
+    End time NOT NULL,
+    Batch int NOT NULL,
+    ExamName varchar(100) NOT NULL,
+    PassMark int NOT NULL,
+    CONSTRAINT FOREIGN KEY(CSID) REFERENCES Course_Subject(CSID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(ExID)
+)ENGINE=INNODB;
+
+
+CREATE TABLE Exam_Mark(
+    EMID varchar(10),
+    RID varchar(10) NOT NULL,
+    ExID varchar(10) NOT NULL,
+    Marks int NOT NULL,
+    ExamState varchar(4) NOT NULL,
+    CONSTRAINT FOREIGN KEY(RID) REFERENCES Registration(RID),
+    CONSTRAINT FOREIGN KEY(ExID) REFERENCES Exam(ExID)
+    ON UPDATE CASCADE,    
+    CONSTRAINT PRIMARY KEY(EMID)
+)ENGINE=INNODB;
+
+    
+CREATE TABLE Attendance(
+    AID varchar(10),
+    RID varchar(10) NOT NULL,
+    Attend_Date date NOT NULL,
+    CSID varchar(10) NOT NULL,
+    Batch int NOT NULL,
+    EventName varchar(100) NOT NULL,
+    Attendance varchar(10) NOT NULL,
+    Arrival varchar(10) NOT NULL,
+    Departure varchar(10) NOT NULL,
+    CONSTRAINT FOREIGN KEY(RID) REFERENCES Registration(RID),
+    CONSTRAINT FOREIGN KEY(CSID) REFERENCES Course_Subject(CSID)
+    ON UPDATE CASCADE,
+    CONSTRAINT PRIMARY KEY(AID)
+)ENGINE=INNODB;
+    
+
+CREATE TABLE Login(
+    LogID varchar(10),
+    UserName varchar(100) NOT NULL,
+    PassWord varchar(20) NOT NULL,
+    CONSTRAINT PRIMARY KEY(LogID)
+)ENGINE=INNODB;
+
+CREATE TABLE Exam_Fail_Participant(
+    ParID varchar(10),
+    RID varchar(10) NOT NULL,
+    StudentName varchar(100) NOT NULL,
+    CSID varchar(10) NOT NULL,
+    ExamName varchar(100) NOT NULL,
+    CONSTRAINT PRIMARY KEY(ParID)
+)ENGINE=INNODB;
+
+
+
+
+SELECT * FROM Student;
+SELECT * FROM Registration;
+SELECT * FROM Batch;
+SELECT * FROM Course;
+SELECT * FROM Subject;
+SELECT * FROM Course_Subject;
+SELECT * FROM Lecturer;
+SELECT * FROM Lecture_Schedule;
+SELECT * FROM Attendance;
+SELECT * FROM Exam;
+SELECT * FROM Exam_Mark;
+SELECT * FROM Payment;
+SELECT * FROM Login;
+
+
+
